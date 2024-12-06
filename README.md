@@ -8,7 +8,7 @@
 
 **Sports Oracle** is a robust blockchain oracle that provides real-time and secure price data for decentralized finance (DeFi) applications. Designed to power protocols like **DegenLend**, the Sports Oracle ensures reliable pricing and protects against market manipulation with innovative security features.
 
-Visit the production environment: [**sportsoracle.predictionlabs.ai**](https://sportsoracle.predictionlabs.ai)
+Visit the production environment: TBA!
 
 
 
