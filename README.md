@@ -2,7 +2,7 @@
 
 *Delivering Secure, Reliable Price Feeds for Sports focused Decentralized Protocols.*
 
-```
+
 
 ## **Overview**
 
@@ -10,7 +10,7 @@
 
 Visit the production environment: [**sportsoracle.predictionlabs.ai**](https://sportsoracle.predictionlabs.ai)
 
-```
+
 
 ## **Features**
 
@@ -19,14 +19,14 @@ Visit the production environment: [**sportsoracle.predictionlabs.ai**](https://s
 - **Cross-Market Integration**: Aggregates price data from multiple liquidity pools for comprehensive coverage.
 - **TWAP Support**: Utilizes Time-Weighted Average Price (TWAP) calculations to reduce volatility impact.
 
-```
+
 
 ## **Production Environment**
 
 The Oracle is live and integrated with DegenLend. Explore the deployment at:  
 TBA!
 
-```
+
 
 ## **License**
 
