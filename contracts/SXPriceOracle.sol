@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 
 contract SXPriceOracle {
     address public owner;
-    mapping(string => uint256) public prices; // Store prices by asset symbol
+    mapping(bytes32 => uint256) public prices; // Store prices by asset symbol
     uint256 public lastUpdated; // Timestamp of the last update
 
     // Event to log price updates
@@ -21,14 +21,16 @@ contract SXPriceOracle {
     // Function to update prices (onlyOwner can call this)
     function updatePrice(string memory asset, uint256 price) public onlyOwner {
         require(price > 0, "Price must be greater than zero");
-        prices[asset] = price;
+        bytes32 assetKey = keccak256(abi.encodePacked(asset));
+        prices[assetKey] = price;
         lastUpdated = block.timestamp;
         emit PriceUpdated(asset, price, block.timestamp);
     }
 
     // Public function to retrieve the latest price
     function getPrice(string memory asset) public view returns (uint256) {
-        require(prices[asset] != 0, "Price not available");
-        return prices[asset];
+        bytes32 assetKey = keccak256(abi.encodePacked(asset)); // Hash the asset string
+        require(prices[assetKey] != 0, "Price not available");
+        return prices[assetKey];
     }
 }
