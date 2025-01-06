@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-contract SimpleSportsOracle {
+contract SXPriceOracle {
     address public owner;
     mapping(string => uint256) public prices; // Store prices by asset symbol
     uint256 public lastUpdated; // Timestamp of the last update
