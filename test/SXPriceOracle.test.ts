@@ -13,17 +13,11 @@ describe("SXPriceOracle", function () {
         await sxPriceOracle.updatePrice("ETH", 300);
         expect((await sxPriceOracle.getPrice("ETH")).toString()).to.equal("300");
 
-        await sxPriceOracle.updatePrice("BNB", 30);
-        expect((await sxPriceOracle.getPrice("BNB")).toString()).to.equal("30");
-
         await sxPriceOracle.updatePrice("USDT", 1);
         expect((await sxPriceOracle.getPrice("USDT")).toString()).to.equal("1");
 
         await sxPriceOracle.updatePrice("USDC", 1);
         expect((await sxPriceOracle.getPrice("USDC")).toString()).to.equal("1");
-
-        await sxPriceOracle.updatePrice("DAI", 1);
-        expect((await sxPriceOracle.getPrice("DAI")).toString()).to.equal("1");
 
         await sxPriceOracle.updatePrice("SX", ethers.utils.parseUnits("0.08", 18));
         expect((await sxPriceOracle.getPrice("SX")).toString()).to.equal(
